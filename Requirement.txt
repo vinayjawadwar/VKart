@@ -1,0 +1,71 @@
+astroid==2.3.3
+colorama==0.4.1
+Django==2.2.7
+isort==4.3.21
+lazy-object-proxy==1.4.3
+mccabe==0.6.1
+Pillow==6.2.1
+psycopg2==2.8.4
+pycryptodome==3.9.7
+pylint==2.4.4
+pytz==2019.3
+six==1.13.0
+sqlparse==0.3.0
+wrapt==1.11.2
+
+
+
+#Hosting Website
+
+pip install django-heroku
+
+
+
+  
+- Copy the project seperately
+- Go to 'Getting Started on Heroku with Python'
+- Create an Heroku account
+- install pipenv
+- Install git ( check git --version)
+- Install Heroku CLI
+- Login heroku
+- Create a virtual enviroment
+- Run manage.py not gonna run - pip freeze nothing installing
+- Check which version django,requests you have and install it
+- Run manage.py and then stop it
+- Go to django heroku
+- Create a Procfile and
+- Install django-heroku
+- Add stuff to settings.py file
+- Install guincorn
+- pip freeze > requirements.txt
+- heroku create attreyaweb (to create an app on heroku)
+- git status git commands (git push heroku master)
+- Open up the website
+- Admin panel not working. heroku run bash. Migrations
+
+
+
+
+
+#Website requirements
+
+
+astroid==2.3.3
+colorama==0.4.1
+dj-database-url==0.5.0
+Django==2.2.7
+django-heroku==0.3.1
+gunicorn==20.0.4
+isort==4.3.21
+lazy-object-proxy==1.4.3
+mccabe==0.6.1
+Pillow==6.2.1
+psycopg2==2.8.4
+pycryptodome==3.9.7
+pylint==2.4.4
+pytz==2019.3
+six==1.13.0
+sqlparse==0.3.0
+whitenoise==5.0.1
+wrapt==1.11.2

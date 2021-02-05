@@ -1,0 +1,27 @@
+{% extends 'shop/basic.html' %}
+{% block title%} Vkart Tracker{% endblock %}
+{% block body %}
+<div class="container">
+
+    <div class="col my-4">
+    <h2>Thank You For Using VKart</h2>    
+        <h2>Payment status regarding your order </h2>
+        <h5><b>Order Id: </b> {{response.ORDERID}}</h5>
+        <h5><b>Amount: </b> RS.{{response.TXNAMOUNT}}</h5>
+        <h5><b>Gateway Name: </b> {{response.GATEWAYNAME}}</h5>
+        <h5><b>Transaction ID: </b> {{response.BANKTXNID}}</h5>
+        <h5><b>Bank Name: </b> {{response.BANKNAME}}</h5>
+        {% if response.RESPCODE == '01' %}
+        <b>Status:</b> ORDER SUCCESS
+        {% else %}
+        <b>Status:</b> ORDER FAILURE
+        {% endif%}
+
+    </div>
+
+</div>
+{% endblock %}
+{% block js %}
+<script>
+</script>
+{% endblock %}

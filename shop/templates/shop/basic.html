@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>{% block title %} {% endblock %}</title>
+    <style>
+     {% block css %}  {% endblock %}
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 Nov, 2020, 2:37:13 AM
+    Author     : kapil
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+    
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.col-2 img{
+    padding: 50px 0;
+}
+
+.header{
+    background: radial-gradient(#fff,#ffd6d6);
+}
+.header .row{
+    margin-top: 70px;
+}
+.categories{
+    margin: 70px 0;
+    
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 200px;
+    margin-bottom: 30px;  
+}
+.col-3 img{
+    width: 100%;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition:transform 0.5s;
+    
+}
+.col-4 img{
+    width: 100%;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+    
+}
+.title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:translate(-50%);
+}
+h4{
+    color: #555;
+    font-weight: normal;
+    
+}
+.col-4 p{
+    font-size: 14px;
+}
+.rating{
+   color: #fff23b;
+}
+.col-4:hover{
+    transform: translateY(-5px);
+}
+/*-----offer----------*/
+.offer{
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+.col-2 .offer-img{
+    padding: 30px;
+    
+     
+}
+small{
+    color: #555;
+}
+/*------Testimonial-----*/
+.testimonial{
+    padding-top: 100px;
+    
+} 
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+    
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16;
+}
+/*----Brands-----*/
+.brands{
+    margin: 10px; auto;
+}
+.col-5{
+    width: 160px;
+}
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.col-5 img:hover{
+    filter:grayscale(0);
+}
+/*-------Footer------------*/
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+    
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+    
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+    
+}
+.footer-col-3,.footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+/*--------All Products---------*/
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+select{
+    border: 1px solid #ff523b;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+.page-btn{
+    margin: 0 auto 80px;
+    
+}
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-height: 40px;
+    cursor: pointer;
+    
+}
+.page-btn span:hover{
+    background: #ff523b;
+    color: #fff;
+}
+.single-product{
+    margin-top: 80px;
+}
+.single-product .col-2 img{
+    padding-right: 20px;
+}
+.single-product .col-2{
+    padding: 2px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product input{
+   width: 50px;
+   height: 40px;
+   padding-left: 10px;
+   font-size: 20px;
+  margin-right: 10px;
+  border: 1px solid #ff523b;
+}
+input:focus{
+    outline:none;
+}
+.single-product .fa{
+    color:#ff523b;
+    margin-left: 10px;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+
+/*--------------Cart items ----------*/
+.cart-page{
+    margin: 80px auto;
+    }
+    table{
+        width:100%;
+        border-collapse: collapse;
+        
+    }
+    .cart-info{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    th{
+        text-align: left;
+        padding: 5px;
+        color: #fff;
+        background: #ff523b;
+        font-weight: normal;
+    }
+    td{
+        padding: 10px 5px;
+    }
+    td input{
+        width: 40px;
+        height: 30px;
+        padding: 5px;
+        
+    }
+    td a{
+        color: #ff523b;
+        font-size: 12px;
+    }
+    td img{
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+    .total-price{
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    .total-price table{
+        border-top:  3px solid #ff523b; 
+        width: 100%;
+        max-width: 290px;
+    }
+    td:last-child{
+        text-align: right;
+        
+    }
+    td:last-child{
+        text-align: right;
+    }
+    
+    /*--------------Acount---------*/
+    .acount-page{
+        padding: 50px 0;
+        background: radial-gradient(#ffff,#ffd6d6);
+    }
+    .form-container{
+        background: #fff;
+        width: 300px;
+        height: 400px;
+        position: relative;
+        text-align: center;
+        padding: 20px 0;
+        margin: auto;
+        box-shadow: 0 0 20px opx rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+    .form-container span{
+        font-weight: bold;
+        padding: 0 10px;
+        color: #555;
+        cursor: pointer;
+        width: 100px;
+        display: inline-block;
+    }
+    .form-btn{
+        display: inline-block;
+    }
+    .form-container form{
+        max-width: 300px;
+        padding: 0 20px;
+        position: absolute;
+        top: 130px;
+        transition: transform 1s;
+    }
+    form input{
+        width: 100%;
+        height: 30px;
+        margin: 10px 0;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+    }
+    form .btn{
+        
+        border: none;
+        cursor: pointer;
+        margin: 10px 0;
+    }
+    form .btn:focus{
+        outline: none;
+    }
+    #LoginForm{
+        left: -300
+    }
+    #RegiForm{
+        left: 0;
+    }
+    form a{
+        font-size: 12px;
+    }
+    #Indicator{
+        width: 90px;
+        border: none;
+        background: #ff523b;
+        height: 3px;
+        margin-top: 8px;
+        transform: translateX(110px);
+        transition: transform 1s;
+        
+    }
+    
+    
+    
+
+/*-----------media query menu-----*/
+@media only screen and (max-width:800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.05s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    
+}
+@media only screen and (max-width:600px){
+    .row{
+        text-align: center;
+    }
+    .col-2,.col-3,.col-4{
+        flex-basis: 100%;
+    }
+    
+}
+.single-product .row{
+    text-align: left;
+}
+.single-product .col-2{
+    padding: 20px 0;
+}
+.single-product h1{
+    font-size: 26px;
+    line-height: 22px;
+}
+
+.cart-info p{
+    display: none;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+
+  background: #242134;  
+  background: -webkit-linear-gradient(to right, #9E9AB4, #242134); 
+  background: linear-gradient(to right, #9E9AB4, #242134); 
+
+ 
+
+
+}
+.hd1{
+    color:#fff;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"><img src="/media/vkart.jpg" width="60px" height="60px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+             
+            <li class="nav-item active">
+                <a class="nav-link" href="/seller">Sell</a>
+            </li> 
+
+            <li class="nav-item active">
+                <a class="nav-link" href="/shop">Shop <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+
+        
+                <a class="nav-link" href="/shop/about">About Us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/shop/contact">Contact Us</a>
+            </li>
+
+                     <li class="nav-item">
+                <a class="nav-link" href="/shop/tracker">Tracker</a>
+            </li>
+           <button type="button" class="btn btn-outline-light mr-sm-2 mx-5 my-2" id="popcart" data-container="body"
+    data-toggle="popover" data-placement="bottom" data-html="true" data-content="Vivamus
+        sagittis lacus vel augue laoreet rutrum faucibus.">
+<h5><img src="/media/cart.jpg" width="40px" height="40px"><span class="badge badge-light" id="cart">0</span> </h5>
+</button>
+
+        </ul>
+
+    </div>
+
+          {% if user.is_authenticated %}
+         <ul class="navbar-nav mr-sm-3">
+         <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Welcome {{request.user}}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/shop/tracker">Order status</a>
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item" href="/shop/logout">Logout</a>
+              </div> 
+            </li>
+   
+         </ul>
+    
+      
+          {% else %}
+
+            <!-- Button trigger Login modal -->
+         <button type="button" class="btn btn-primary mr-sm-3" data-toggle="modal" data-target="#loginModal">
+         Login
+        </button>
+
+          <!-- Button trigger signup modal -->
+         <button type="button" class="btn btn-primary mr-sm-4" data-toggle="modal" data-target="#signupModal">
+         SignUp
+        </button>
+
+         {% endif %}  
+           
+        <form method="get" action="/shop/search/" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search"
+                   id="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+        </div>
+      </nav>
+     
+{% for message in messages  %}
+<div class="alert alert-{{ message.tags }} mb-0 alert-dismissible fade show" role="alert">
+  <strong>Message: </strong> {{ message}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}
+
+
+<!--signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">SignUp Here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <form action='/shop/signup' method="post" >
+        <div class="form-group">
+    <label for="username">Username </label>
+    <input type="text" class="form-control" id="username" name="username" placeholder="Enter Unique Username of lower case & only alphanumeric" Required>
+  </div>
+
+        <div class="form-group">
+    <label for="fname">First Name</label>
+    <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" Required>
+  </div>
+
+  <div class="form-group">
+    <label for="fname">Last Name</label>
+    <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" Required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name=email placeholder="name@example.com" Required>
+  </div>
+
+  <div class="form-group row">
+    <label for="pass1" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Choose Your0 Password" Required> 
+    </div>
+  </div>
+<div class="form-group row">
+    <label for="pass2" class="col-sm-2 col-form-label">Conform password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Enter password again" Required>
+    </div>
+  </div>
+ 
+ {% csrf_token %}
+
+     <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--signup Modal end -->
+
+
+<!--Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalTitle">Login Here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+<form action="/shop/login" method="post"> 
+ {% csrf_token %}
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="Enter Your Username" Required>
+  </div>
+ 
+
+   <div class="form-group ">
+    <label for="loginpass">Password</label>
+    <input type="password" class="form-control" id="loginpass" name="loginpass" placeholder="Enter Your Password" Required> 
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+    </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% block body %} {% endblock %}
+
+
+
+        <!-------footer-------->
+        <div class="footer mt-4">
+         <div class="container">
+           
+            <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and ios mobile phone </p> 
+                        <div class="app-logo">
+                            <img src="/media/Appstore.jpeg">
+                            </div> 
+                            <div class="app-logo">
+                            <img src="/media/playstore.jpeg">
+                        </div>   
+                    </div>
+                
+                   <div class="footer-col-2">
+                     <h3>VKart</h3>
+                    <p>Our Purpose Is To Make The Products 
+                            Available for  every Buyer </p>
+                       
+                    </div>
+                 <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>join affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow US </h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>You Tube</li>
+                    </ul>
+                </div>   
+           
+            <hr>
+                <p class="copyright"> Copyright 2020 - VKart Store </p>
+           </div>        
+        </div>
+       
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+
+{% block js %} {% endblock %}
+
+
+</html>
+

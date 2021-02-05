@@ -1,0 +1,164 @@
+{% extends 'shop/basic.html' %}
+
+{%block title%} Contact Us-VKart {% endblock%}
+
+{%block body %}
+
+<div class="container">
+    <div class="d-flex align-items-center p-3 my-3 text-dark-50 bg-dark-sm">
+        <div class="lh-100">
+            <h2 class="mb-0 text-dark lh-100">VKart</h2>
+            <p>Since 2018</p>
+        </div>
+    </div>
+
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Suggestions</h6>
+        <div class="media text-muted pt-3">
+            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"><title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#007bff"/>
+                <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+            </svg>
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">vinaykapil@gmail.com</strong>
+                Ceo of VKart .
+            </p>
+        </div>
+        <div class="media text-muted pt-3">
+            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"><title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#e83e8c"/>
+                <text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+            </svg>
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">VKartEom@gmail.com</strong>
+                Contact for any query
+            </p>
+        </div>
+        <div class="media text-muted pt-3">
+            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#6f42c1"/>
+                <text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+            </svg>
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">VKartFeedback@gmail.com</strong>
+                Send feedback on your experience regarding VKart.
+            </p>
+        </div>
+        <small class="d-block text-right mt-3">
+            <a href="/shop/contact/">All suggestions</a>
+        </small>
+    </div>
+
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Recent Updates</h6>
+        <div class="media text-muted pt-3">
+            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#007bff"/>
+                <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+            </svg>
+            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-gray-dark">Vinay Jawadwar</strong>
+                    <a href="https://www.facebook.com/vinay.jawadwar">Follow</a>
+                </div>
+                <span class="d-block">Facebook</span>
+            </div>
+        </div>
+
+       <div class="media text-muted pt-3">
+            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#007bff"/>
+                <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+            </svg> 
+         <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-gray-dark">Kapil Mathpati</strong>
+                    <a href="https://www.facebook.com/vinay.jawadwar">Follow</a>
+                </div>
+                <span class="d-block">Facebook</span>
+            </div>
+       </div>
+
+        <div class="media text-muted pt-3">
+            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#007bff"/>
+                <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+            </svg>
+            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-gray-dark">Vinay__jawadwar</strong>
+                    <a href="https://www.instagram.com/vinay__jawadwar/?hl=en">Follow</a>
+                </div>
+                <span class="d-block">Instagram</span>
+            </div>
+        </div>
+
+     <div class="media text-muted pt-3">
+            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#007bff"/>
+                <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+            </svg>
+            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-gray-dark">Kapil Mathpati</strong>
+                    <a href="https://www.instagram.com/vinay__jawadwar/?hl=en">Follow</a>
+                </div>
+                <span class="d-block">Instagram</span>
+            </div>
+    </div>
+
+        <div class="media text-muted pt-3">
+        </div>
+        <small class="d-block text-right mt-3">
+            <a href="/shop/about">All updates</a>
+        </small>
+    </div>
+
+
+    <! –– Contact me form ––>
+
+
+    <div class="container my-4">
+        <h3> Contact Us </h3>
+
+        <form action="/shop/contact/" method="POST"> {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name='name' placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <label for="name">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="username@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="phone">Mobile Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Numbers">
+            </div>
+
+            <div class="form-group">
+                <label for="desc">How May We Help You </label>
+                <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+            </div>
+
+            <button type="Submit" class="btn btn-info">SUBMIT</button>
+        </form>
+
+    </div>
+</div>
+
+    {% endblock %}
+
+    {% block js %}
+    <script>
+  {% if thank %}
+     alert('Thanks for contacting us. We will get back to you soon');
+     document.location = "/shop/contact/";
+  {% endif %}
+
+    </script>
+    {% endblock%}

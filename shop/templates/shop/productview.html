@@ -1,0 +1,41 @@
+{% extends 'shop/basic.html' %}
+
+{%block title%} Product:{{product.product_name}} {% endblock%}
+
+{%block body %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <img src="/media/{{product.image}}" width="400px" height="500px">
+            </div>
+     
+           {% if user.is_authenticated %}
+            <div class="row my-5">
+                <a class="btn btn-primary  mx-4" href="/shop" role="button">Shop</a>        
+                <a href="/shop/checkout"> <button class="btn btn-primary mx-4" id="checkout">Checkout</button> </a>
+            </div>
+
+            {% else %}
+           <div class="alert alert-primary" role="alert">
+                 Please login your account to buy porduct...
+               </div>
+           {% endif %}
+               
+        </div>
+        <div class="col-md-8">
+            <h3> {{product.product_name}} </h3>
+            <h6 style="color:green;"><b>FREE SHIPPING</b></h6>
+            <h3> Rs. {{product.price}} </h3>
+            <h5> {{product.desc}} </h5>
+
+            <h5><b> Category:</b> {{product.subcategory}} </h5>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock%}
+
